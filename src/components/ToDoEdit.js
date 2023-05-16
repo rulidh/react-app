@@ -18,7 +18,7 @@ function ToDoEdit() {
         setJam(data.jam)
     }
 
-    const editList= async(e)=> {
+    const EditList= async(e)=> {
         e.preventDefault()
         const list= {title, jam}
         await fetch(`http://localhost:8080/todo/${id}`, {
@@ -32,18 +32,18 @@ function ToDoEdit() {
 
     return(
         <div>
-            <form onSubmit={editList}>
+            <form onSubmit={EditList}>
                 <div>
                     <label>Title</label>
                     <div>
-                        <input  onChange={(e)=> setTitle(e.target.value)} value={title} type="text" placeholder="What you want to do?"></input>
+                        <input onChange={(e)=> setTitle(e.target.value)} value={title} type="text" placeholder=""></input>
                     </div>
                 </div>
 
                 <div>
                     <label>Jam</label>
                     <div>
-                        <input onChange={(e)=> setJam(e.target.value)} value={jam} type="text" placeholder="Jam berapa kamu ingin mengerjakan?"></input>
+                        <input onChange={(e)=> setJam(e.target.value)} value={jam} type="text" placeholder=""></input>
                     </div>
                 </div>
 
@@ -58,4 +58,4 @@ function ToDoEdit() {
     )
 }
 
-export default ToDoEdit
+export default ToDoEdit;

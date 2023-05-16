@@ -43,7 +43,7 @@ function ToDoList() {
                             <td>{list.title}</td>
                             <td>{list.jam}</td>
                             <td>
-                                <Link to={`/edit:${list.id}`}>Edit</Link>
+                                <Link to={`/edit/${list.id}`}>Edit</Link>
                                 <button onClick={()=> {deleteList(list.id)}}>Delete</button>
                             </td>
                         </tr>
